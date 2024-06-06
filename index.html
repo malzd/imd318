@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body background="image/bg.png" style="margin-bottom: 200px;">
+
+<a name="First_Anchor"></a>
+
+<div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</div>
+<br><br><br>
+<div class="hero">
+    <div class="container">
+        <div class="main">
+            <h1>Mal's Personal Website</h1>
+            <p>Hello everyone, I'm Mohamad Akmal Bin Zainudin. I'm a student at University Technology Mara (UiTM) Kedah Branch.
+                I'm  studying in Diploma in Information Management.
+                This is my personal website for course Introduction to Web Content Management (IMD318). <br><br></p>
+            <a href="aboutme.html" class="button">click here</a>
+        </div>
+        <div class="img-container">
+            <div class="slider">
+                <div class="list">
+                    <div class="item">
+                        <img src="image/mal_1.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="image/mal_2.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="image/mal_3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer" style="text-align:center; padding:10px; font-size:12px;">
+    <marquee behavior="scroll" direction="right" scrollamount="15">
+        <p><b>THANK YOU FOR VISITING MY PAGE!!</b> <br> <i>YOU'RE AWESOME.</i></p>
+    </marquee>
+    <p style="margin-top:10px;"><b>&copy; 2024 Akmal Zainudin. All rights reserved.</b></p>
+</div>
+
+<script>
+    function showMenu() {
+        document.getElementById('navLinks').style.right = "0";
+    }
+
+    function hideMenu() {
+        document.getElementById('navLinks').style.right = "-200px";
+    }
+
+    var currentIndex = 0;
+
+    function slide() {
+        const slides = document.querySelectorAll('.slider .list .item');
+        const totalSlides = slides.length;
+
+        for (let i = 0; i < totalSlides; i++) {
+            slides[i].style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        currentIndex = (currentIndex + 1) % totalSlides;
+    }
+
+    setInterval(slide, 2000);
+</script>
+
+
+
+
+</body>
+</html>
